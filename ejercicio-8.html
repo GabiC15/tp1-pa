@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const date = new Date()
+
+    const table = document.createElement("table")
+
+    table.innerHTML = `<tr>
+      <th>Año Completo</th>
+      <th>Año</th>
+      <th>Mes</th>
+      <th>Día</th>
+      <th>Hora</th>
+      <th>Minutos</th>
+      <th>Segundos</th>
+      <th>Milisegundos</th>
+      <th>Epoch Time</th>
+    </tr>`
+
+    table.innerHTML += `<tr>
+      <td>${date.getFullYear()}</td>
+      <td>${date.getYear()}</td>
+      <td>${date.getMonth()}</td>
+      <td>${date.getDate()}</td>
+      <td>${date.getHours()}</td>
+      <td>${date.getMinutes()}</td>
+      <td>${date.getSeconds()}</td>
+      <td>${date.getMilliseconds()}</td>
+      <td>${date.getTime()}</td>
+    </tr>`
+
+    document.body.append(table)
+  </script>
+</body>
+</html>
